@@ -36,6 +36,13 @@ jobs:
           ${{ secrets.GOOGLE_SERVICES_JSON }}
           EOF
 
+      - name: Create firebase_options.dart
+        run: |
+          mkdir -p lib
+          cat <<'EOF' > lib/firebase_options.dart
+          ${{ secrets.FIREBASE_OPTIONS_DART }}
+          EOF
+
       - name: Install dependencies
         run: flutter pub get
 

@@ -48,7 +48,7 @@ class _SignUpScreenState extends ConsumerState<SignUpScreen> {
                 ? null
                 : () => ref.read(firebaseAuthControllerProvider.notifier).signUp(
                     _emailController.text, 
-                    _emailController.text
+                    _passwordController.text
                   ),
               child: firebaseAuthState.isLoading
                 ? const CircularProgressIndicator()

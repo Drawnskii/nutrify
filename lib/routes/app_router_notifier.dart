@@ -11,10 +11,11 @@ class AppRouterNotifier extends _$AppRouterNotifier implements Listenable {
 
   @override
   void build() {
+    // FIX: Using (_, _) instead of (_, __) to satisfy the linter
     // Listen to auth changes
-    ref.listen(authStateChangesProvider, (_, __) => _notify());
+    ref.listen(authStateChangesProvider, (_, _) => _notify());
     // Listen to profile/onboarding changes
-    ref.listen(userProfileProvider, (_, __) => _notify());
+    ref.listen(userProfileProvider, (_, _) => _notify());
   }
 
   void _notify() {

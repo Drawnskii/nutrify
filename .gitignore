@@ -49,3 +49,7 @@ app.*.map.json
 firebase.json
 google-services.json
 GoogleService-Info.plist
+
+# Generated files
+*.freezed.dart
+*.g.dart

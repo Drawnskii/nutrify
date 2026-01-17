@@ -10,6 +10,7 @@ abstract class UserModel with _$UserModel {
     String? email, 
     String? displayName, 
     String? photoURL,
+    @Default(false) bool emailVerified,
   }) = _UserModel;
 
   factory UserModel.fromJson(Map<String, dynamic> json) => _$UserModelFromJson(json);
